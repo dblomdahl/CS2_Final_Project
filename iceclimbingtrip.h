@@ -1,7 +1,6 @@
 #ifndef _ICECLIMBINGTRIP_H_
 #define _ICECLIMBINGTRIP_H_
 
-
 #include "trip.h"
 
 class IceClimbingTrip : public Trip{
