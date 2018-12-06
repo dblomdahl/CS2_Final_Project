@@ -3,6 +3,7 @@
 #include "trip.h"
 #include "iceclimbingtrip.h"
 #include "climbingtrip.h"
+#include "switch.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -28,7 +29,8 @@ int main(){
         case 2: cout << "Choice is backpacking" << endl; 
             break; 
         case 3: cout << "Choice is biking" << endl;
-            bikeTrips.push_back( BikingTrip(4,"Whistler", true));
+            // bikeTrips.push_back( BikingTrip(4,"Whistler", true));
+            BikeSwitch();
             break; 
         case 4: cout << "Choice is climbing" << endl;
             break;
@@ -41,6 +43,7 @@ int main(){
 
         }while(1 < 2);
 
+// must add for loops for calculating 
         bikeTrips.push_back( BikingTrip(1,"Silver Mountain", true));
 
         cout << "Days: " << bikeTrips[0].GetDays() << endl;
