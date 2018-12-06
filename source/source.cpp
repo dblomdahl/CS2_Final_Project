@@ -19,19 +19,16 @@ int main(){
             if(addTrip == 'n'){
                 break;
             }
-            cout << "What kind oftrip you would like to add?" << endl;
+            cout << "What kind of trip you would like to add?" << endl;
             cout << "1 Hiking Trip" << endl << "2 Backpacking Trip" << endl << "3 Biking Trip" << endl << "4 Climbing Trip" << endl << "5 Ice Climbing Trip" << endl;
             cin >> tripSwitch;
-            switch(tripSwitch){
-                
+            switch(tripSwitch){   
         case 1: cout << "Choice is hiking" << endl;
             break; 
         case 2: cout << "Choice is backpacking" << endl; 
             break; 
         case 3: cout << "Choice is biking" << endl;
-
             bikeTrips.push_back( BikingTrip(4,"Whistler", true));
-
             break; 
         case 4: cout << "Choice is climbing" << endl;
             break;
