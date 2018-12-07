@@ -11,15 +11,44 @@ using namespace std;
 
 void BikeSwitch(){
     string switch_Location;
-    int switch_days;
-    bool switch_liftserved;
+    int switch_Days;
+    bool switch_Liftserved;
 
-    cout << "Where is the bike location?" << endl;
-    cin >> switch_Location;
-    cout << "How many days will you bike for?" << endl;
-    cin >> switch_days;
-    cout << "Enter 1 if the bike trip is lift-served, 0 if not. " << endl;
-    cin >> switch_liftserved;
-
+    // cout << "Where is the bike location?" << endl;
+    // cin >> switch_Location;
+    // cout << "How many days will you bike for?" << endl;
+    // cin >> switch_days;
+    // cout << "Enter 1 if the bike trip is lift-served, 0 if not. " << endl;
+    // cin >> switch_liftserved;
     // bikeTrips.push_back( BikingTrip(switch_days, switch_Location, switch_liftserved));
+
 }
+
+string AskForLocation(){
+    string switch_Location;
+    cout << "Where is the trip location?" << endl;
+    cin >> switch_Location;
+    return switch_Location;
+}
+int AskForDays(){
+    int switch_Days;
+    cout << "How many days is the trip?" << endl;
+    cin >> switch_Days;
+    return switch_Days;
+}
+
+double AskForMiles(){
+    double switch_Miles;
+    cout << "How many miles is the trip?" << endl;
+    cin >> switch_Miles;
+    return switch_Miles;
+}
+
+bool AskForListServed(){
+    bool switch_Liftserved;
+    cout << "Enter 1 if the bike trip is lift-served, 0 if not. " << endl;
+    cin >> switch_Liftserved;
+    return switch_Liftserved;
+}
+
+

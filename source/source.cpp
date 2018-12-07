@@ -24,20 +24,25 @@ int main(){
             cout << "1 Hiking Trip" << endl << "2 Backpacking Trip" << endl << "3 Biking Trip" << endl << "4 Climbing Trip" << endl << "5 Ice Climbing Trip" << endl;
             cin >> tripSwitch;
             switch(tripSwitch){   
-        case 1: cout << "Choice is hiking" << endl;
-            break; 
-        case 2: cout << "Choice is backpacking" << endl; 
-            break; 
-        case 3: cout << "Choice is biking" << endl;
-            // bikeTrips.push_back( BikingTrip(4,"Whistler", true));
-            BikeSwitch();
-            break; 
-        case 4: cout << "Choice is climbing" << endl;
-            break;
-        case 5: cout << "Choice is ice climbing" << endl;
-            break;
-       default: cout << "Invalid. Choose Another Number"; 
-                break;   
+        case 1: { cout << "Choice is hiking" << endl;
+            break; } 
+        case 2: { cout << "Choice is backpacking" << endl; 
+            break; } 
+        case 3: { cout << "Choice is biking" << endl;
+            int days3;
+            days3 = AskForDays();
+            bool liftserved3;
+            liftserved3 = AskForListServed();
+            string location3;
+            location3 = AskForLocation();
+            bikeTrips.push_back( BikingTrip(days3, location3, liftserved3));
+            break; }
+        case 4: { cout << "Choice is climbing" << endl;
+            break; }
+        case 5: { cout << "Choice is ice climbing" << endl;
+            break; }
+       default: { cout << "Invalid. Choose Another Number"; 
+                break; } 
             }
             
 
@@ -47,9 +52,9 @@ int main(){
         bikeTrips.push_back( BikingTrip(1,"Silver Mountain", true));
 
         cout << "Days: " << bikeTrips[0].GetDays() << endl;
-        cout << "Days: " << bikeTrips[0].GetLocation() << endl;
+        cout << "Location: " << bikeTrips[0].GetLocation() << endl;
         cout << "Days: " << bikeTrips[1].GetDays() << endl;
-        cout << "Days: " << bikeTrips[1].GetLocation() << endl;
+        cout << "Location: " << bikeTrips[1].GetLocation() << endl;
  
 
         // BikingTrip b1(1,"Silver Mountain", true);

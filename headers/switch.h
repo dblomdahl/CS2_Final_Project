@@ -12,5 +12,9 @@
 #include <iostream>
 
 void BikeSwitch();
+string AskForLocation();
+int AskForDays();
+double AskForMiles();
+bool AskForListServed();
 
 #endif
