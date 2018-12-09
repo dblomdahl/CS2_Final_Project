@@ -58,5 +58,15 @@ bool AskForMultipitch(){
     return switch_Multipitch;
 }
 
+// void CountRating(int ratingValue){
+//     switch(ratingValue){
+//         case 1: {easyCount++;}
+//         case 2: {activeCount++;}
+//         case 3: {adventurousCount++;}
+//         case 4: {epicCount};
+//     }
+
+
+
 
 

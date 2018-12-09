@@ -17,5 +17,6 @@ int AskForDays();
 double AskForMiles();
 bool AskForListServed();
 bool AskForMultipitch();
+void CountRating(int ratingValue);
 
 #endif
