@@ -16,5 +16,6 @@ string AskForLocation();
 int AskForDays();
 double AskForMiles();
 bool AskForListServed();
+bool AskForMultipitch();
 
 #endif

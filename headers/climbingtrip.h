@@ -13,10 +13,16 @@ class ClimbingTrip : public Trip{
     int _days;
     string _location;
     bool _multipitch;
+    int _ratingValue;
+    string _ratingString;
 
     public: 
     ClimbingTrip();
-    ClimbingTrip(int days, string location);
+    ClimbingTrip(int days, string location, bool multipitch){
+        _days = days;
+        _location = location;
+        _multipitch = multipitch;
+    }
 
     void SetDays();
     void SetLocation();
@@ -24,6 +30,8 @@ class ClimbingTrip : public Trip{
     string GetLocation();
     void CalculateRating();
     void GetMulitpitch();
+    string GetRatingString();
+    int GetRatingValue();
 };
 
 #endif

@@ -14,6 +14,7 @@ int main(){
         int tripSwitch = 0;
         vector<BikingTrip> bikeTrips;
         vector<HikingTrip> hikeTrips;
+        vector<ClimbingTrip> climbTrips;
 
         do{
             cout << "Add a trip? y/n" << endl;
@@ -45,6 +46,13 @@ int main(){
             bikeTrips.push_back( BikingTrip(days3, location3, liftserved3));
             break; }
         case 4: { cout << "Choice is climbing" << endl;
+            int days4;
+            days4 = AskForDays();
+            bool multipitch4;
+            multipitch4 = AskForMultipitch();
+            string location4;
+            location4 = AskForLocation();
+            climbTrips.push_back( ClimbingTrip(days4, location4, multipitch4));
             break; }
         case 5: { cout << "Choice is ice climbing" << endl;
             break; }
@@ -57,6 +65,8 @@ int main(){
 
         for(int i = 0; i < hikeTrips.size(); i++){hikeTrips[i].CalculateRating();}
         for(int i = 0; i < bikeTrips.size(); i++){bikeTrips[i].CalculateRating();}
+        for(int i = 0; i < climbTrips.size(); i++){climbTrips[i].CalculateRating();}
+
 
         
 
@@ -64,9 +74,11 @@ int main(){
         for(int i = 0; i < hikeTrips.size(); i++){
             cout << "Hike Trip " << i+1 << ": " << hikeTrips[i].GetLocation() << ", " << hikeTrips[i].GetRatingString() << ", " << hikeTrips[i].GetRatingValue() << endl;  
         }
-         for(int i = 0; i < bikeTrips.size(); i++){
-             cout << i << endl;
+        for(int i = 0; i < bikeTrips.size(); i++){
             cout << "Bike Trip " << i+1 << ": " << bikeTrips[i].GetLocation() << ", " << bikeTrips[i].GetRatingString() << ", " << bikeTrips[i].GetRatingValue() << endl;
+        }
+        for(int i = 0; i < climbTrips.size(); i++){
+            cout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << ", " << climbTrips[i].GetRatingValue() << endl;
         }
 
 // cout << endl;

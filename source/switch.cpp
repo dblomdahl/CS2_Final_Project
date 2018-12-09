@@ -10,9 +10,9 @@
 using namespace std;
 
 void BikeSwitch(){
-    string switch_Location;
-    int switch_Days;
-    bool switch_Liftserved;
+    // string switch_Location;
+    // int switch_Days;
+    // bool switch_Liftserved;
 
     // cout << "Where is the bike location?" << endl;
     // cin >> switch_Location;
@@ -50,5 +50,13 @@ bool AskForListServed(){
     cin >> switch_Liftserved;
     return switch_Liftserved;
 }
+
+bool AskForMultipitch(){
+       bool switch_Multipitch;
+    cout << "Enter 1 if the climbing trip is multipitch, 0 if not. " << endl;
+    cin >> switch_Multipitch;
+    return switch_Multipitch;
+}
+
 
 
