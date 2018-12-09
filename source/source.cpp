@@ -13,6 +13,7 @@ int main(){
         char addTrip = 'y';
         int tripSwitch = 0;
         vector<BikingTrip> bikeTrips;
+        vector<HikingTrip> hikeTrips;
 
         do{
             cout << "Add a trip? y/n" << endl;
@@ -22,9 +23,15 @@ int main(){
             }
             cout << "What kind of trip you would like to add?" << endl;
             cout << "1 Hiking Trip" << endl << "2 Backpacking Trip" << endl << "3 Biking Trip" << endl << "4 Climbing Trip" << endl << "5 Ice Climbing Trip" << endl;
+            
             cin >> tripSwitch;
             switch(tripSwitch){   
         case 1: { cout << "Choice is hiking" << endl;
+            double miles1;
+            miles1 = AskForMiles();
+            string location1;
+            location1 = AskForLocation();
+            hikeTrips.push_back( HikingTrip(location1, miles1));
             break; } 
         case 2: { cout << "Choice is backpacking" << endl; 
             break; } 
@@ -48,35 +55,22 @@ int main(){
 
         }while(1 < 2);
 
+        for(int i = 0; i < hikeTrips.size(); i++){hikeTrips[i].CalculateRating();}
+        for(int i = 0; i < bikeTrips.size(); i++){bikeTrips[i].CalculateRating();}
+
+        
+
 // must add for loops for calculating 
-        bikeTrips.push_back( BikingTrip(1,"Silver Mountain", true));
+        for(int i = 0; i < hikeTrips.size(); i++){
+            cout << "Hike Trip " << i+1 << ": " << hikeTrips[i].GetLocation() << ", " << hikeTrips[i].GetRatingString() << ", " << hikeTrips[i].GetRatingValue() << endl;  
+        }
+         for(int i = 0; i < bikeTrips.size(); i++){
+             cout << i << endl;
+            cout << "Bike Trip " << i+1 << ": " << bikeTrips[i].GetLocation() << ", " << bikeTrips[i].GetRatingString() << ", " << bikeTrips[i].GetRatingValue() << endl;
+        }
 
-        cout << "Days: " << bikeTrips[0].GetDays() << endl;
-        cout << "Location: " << bikeTrips[0].GetLocation() << endl;
-        cout << "Days: " << bikeTrips[1].GetDays() << endl;
-        cout << "Location: " << bikeTrips[1].GetLocation() << endl;
- 
-
-        // BikingTrip b1(1,"Silver Mountain", true);
-        // BikingTrip b2(4,"Whistler", true);
-        // BikingTrip b3(1,"Beacon Hill", false);
-        // BikingTrip b4(4, "Priest Lake", false);
-
-        // BikingTrip b1(1,"Silver Mountain", true);
-        // BikingTrip b2(4,"Whistler", true);
-        // BikingTrip b3(1,"Beacon Hill", false);
-        // BikingTrip b4(4, "Priest Lake", false);
-
-        cout << bikeTrips[0].GetLocation() << endl;
-        bikeTrips[0].CalculateRating();
-        cout << bikeTrips[0].GetRatingString() << endl;
-        cout << bikeTrips[0].GetRatingValue() << endl;
-        cout << endl;
-        cout << bikeTrips[1].GetLocation() << endl;
-        bikeTrips[1].CalculateRating();
-        cout << bikeTrips[1].GetRatingString() << endl;
-        cout << bikeTrips[1].GetRatingValue() << endl;
 // cout << endl;
+
 //         cout << b3.GetLocation() << endl;
 //         b3.CalculateRating();
 //         cout << b3.GetRatingString() << endl;

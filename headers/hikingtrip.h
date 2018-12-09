@@ -10,20 +10,22 @@ using namespace std;
 class HikingTrip : public Trip{
     
     private: 
-    int _days;
     string _location;
-    double miles;
+    double _miles;
+    string _ratingString;
+    int _ratingValue;
 
     public: 
     HikingTrip();
-    HikingTrip(int days, string location, double miles);
+    HikingTrip(string location, double miles){
+        _location = location;
+        _miles = miles;
+    }
 
-    void SetDays();
-    void SetLocation();
-    int GetDays();
     string GetLocation();
     void CalculateRating();
-    void GetMulitpitch();
+    string GetRatingString();
+    int GetRatingValue();
 
 
 };
