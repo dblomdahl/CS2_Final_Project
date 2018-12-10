@@ -12,9 +12,9 @@
 #include <iostream>
 
 void BikeSwitch();
-string AskForLocation();
-int AskForDays();
-double AskForMiles();
+string AskForLocation(string tripType);
+int AskForDays(string tripType);
+double AskForMiles(string tripType);
 bool AskForListServed();
 bool AskForMultipitch();
 void CountRating(int ratingValue, int& easyCount, int& activeCount, int& adventurousCount, int& epicCount, string tripType);

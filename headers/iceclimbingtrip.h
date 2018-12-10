@@ -8,16 +8,21 @@ class IceClimbingTrip : public Trip{
     private: 
     int _days;
     string _location;
+    string _ratingString;
+    int _ratingValue;
 
     public: 
     IceClimbingTrip();
-    IceClimbingTrip(int days, string location);
+    IceClimbingTrip(int days, string location){
+        _days = days;
+        _location = location;
+    }
 
-    void SetDays();
-    void SetLocation();
     int GetDays();
     string GetLocation();
     void CalculateRating();
+    int GetRatingValue();
+    string GetRatingString();
 };
 
 #endif

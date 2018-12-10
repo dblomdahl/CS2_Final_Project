@@ -13,6 +13,7 @@
         "algorithm": "cpp",
         "ostream": "cpp",
         "iosfwd": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "vector": "cpp"
     }
 }

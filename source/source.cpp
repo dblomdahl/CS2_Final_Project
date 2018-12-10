@@ -24,6 +24,7 @@ int main(){
         vector<BackpackingTrip> backpackTrips;
         vector<BikingTrip> bikeTrips;
         vector<ClimbingTrip> climbTrips;
+        vector<IceClimbingTrip> iceClimbTrips;
 
         do{
             cout << "Add a trip? y/n" << endl;
@@ -38,39 +39,44 @@ int main(){
             switch(tripSwitch){   
             case 1: { cout << "Choice is hiking" << endl;
                 double miles1;
-                miles1 = AskForMiles();
+                miles1 = AskForMiles("hiking");
                 string location1;
-                location1 = AskForLocation();
+                location1 = AskForLocation("hiking");
                 hikeTrips.push_back( HikingTrip(location1, miles1));
                 break; } 
             case 2: { cout << "Choice is backpacking" << endl; 
                 int days2;
-                days2 = AskForDays();
+                days2 = AskForDays("backpacking");
                 double miles2;
-                miles2 = AskForMiles();
+                miles2 = AskForMiles("backpacking");
                 string location2;
-                location2 = AskForLocation();
+                location2 = AskForLocation("backpacking");
                 backpackTrips.push_back( BackpackingTrip(days2, location2, miles2));
                 break; } 
             case 3: { cout << "Choice is biking" << endl;
                 int days3;
-                days3 = AskForDays();
+                days3 = AskForDays("biking");
                 bool liftserved3;
                 liftserved3 = AskForListServed();
                 string location3;
-                location3 = AskForLocation();
+                location3 = AskForLocation("biking");
                 bikeTrips.push_back( BikingTrip(days3, location3, liftserved3));
                 break; }
             case 4: { cout << "Choice is climbing" << endl;
                 int days4;
-                days4 = AskForDays();
+                days4 = AskForDays("climbing");
                 bool multipitch4;
                 multipitch4 = AskForMultipitch();
                 string location4;
-                location4 = AskForLocation();
+                location4 = AskForLocation("climbing");
                 climbTrips.push_back( ClimbingTrip(days4, location4, multipitch4));
                 break; }
             case 5: { cout << "Choice is ice climbing" << endl;
+                int days5;
+                days5 = AskForDays("ice climbing");
+                string location5;
+                location5 = AskForLocation("ice climbing");
+                iceClimbTrips.push_back( IceClimbingTrip(days5, location5));
                 break; }
             default: { cout << "Invalid. Choose Another Number"; 
                 break; } 

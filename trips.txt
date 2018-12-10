@@ -1,7 +1,6 @@
-Hike Trip 1: vf, Epic
 
 Easy trips: 0
 Active trips: 0
 Adventurous trips: 0
-Epic trips: 1
-Total trips: 1
+Epic trips: 0
+Total trips: 0

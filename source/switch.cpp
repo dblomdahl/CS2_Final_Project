@@ -24,24 +24,24 @@ void BikeSwitch(){
 
 }
 
-string AskForLocation(){
+string AskForLocation(string tripType){
     string switch_Location;
-    cout << "Where is the trip location?" << endl;
+    cout << "Where is the " << tripType << " trip location?" << endl;
     // getline(cin, switch_Location);
     cin >> switch_Location;
     return switch_Location;
 }
 
-int AskForDays(){
+int AskForDays(string tripType){
     int switch_Days;
-    cout << "How many days is the trip?" << endl;
+    cout << "How many days is the " << tripType << " trip?" << endl;
     cin >> switch_Days;
     return switch_Days;
 }
 
-double AskForMiles(){
+double AskForMiles(string tripType){
     double switch_Miles;
-    cout << "How many miles is the trip?" << endl;
+    cout << "How many miles is the " << tripType << " trip?" << endl;
     cin >> switch_Miles;
     return switch_Miles;
 }
