@@ -1,8 +1,4 @@
-Backpack Trip 1: a, Active, 2
-Backpack Trip 2: b, Epic, 4
-Backpack Trip 3: c, Adventurous, 3
-Backpack Trip 4: d, Epic, 4
 easy trips: 0
-active trips: 1
-adventurous trips: 2
-epic trips: 4
+active trips: 0
+adventurous trips: 0
+epic trips: 0

@@ -9,6 +9,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <unistd.h>
+
 using namespace std;
 
 int main(){
@@ -103,7 +105,6 @@ int main(){
                 case 2: {activeCount++;}
                 case 3: {adventurousCount++;}
                 case 4: {epicCount++;}
-                cout << backpackTrips[i].GetRatingValue();
             }
         }
         for(int i = 0; i < climbTrips.size(); i++){
@@ -151,6 +152,8 @@ ofstream fout;
         fout << "active trips: " << activeCount << endl;
         fout << "adventurous trips: " << adventurousCount << endl;
         fout << "epic trips: " << epicCount << endl;
+        
+
         
         fout.close();
 
