@@ -107,6 +107,8 @@ int main(){
             cout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << endl;
         }
 
+        cout << "Hiking trips size is " << hikeTrips.size() << endl;
+
 ofstream fout;
         fout.open("trips.txt");
         if(fout.fail() ) {
@@ -114,15 +116,19 @@ ofstream fout;
             return 0;
         }
          for(int i = 0; i < hikeTrips.size(); i++){
+            // fout << CheckForNoTrips(hikeTrips.size(), "hiking");
             fout << "Hike Trip " << i+1 << ": " << hikeTrips[i].GetLocation() << ", " << hikeTrips[i].GetRatingString() << endl;  
         }
         for(int i = 0; i < backpackTrips.size(); i++){
+            // fout << CheckForNoTrips(backpackTrips.size(), "backpacking");
             fout << "Backpack Trip " << i+1 << ": " << backpackTrips[i].GetLocation() << ", " << backpackTrips[i].GetRatingString() << endl;
         }
         for(int i = 0; i < bikeTrips.size(); i++){
+            // fout << CheckForNoTrips(bikeTrips.size(), "biking");
             fout << "Bike Trip " << i+1 << ": " << bikeTrips[i].GetLocation() << ", " << bikeTrips[i].GetRatingString() << endl;
         }
         for(int i = 0; i < climbTrips.size(); i++){
+            // fout << CheckForNoTrips(climbTrips.size(), "climbing");
             fout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << endl;
         }
         fout << endl;
@@ -131,9 +137,6 @@ ofstream fout;
         fout << "Adventurous trips: " << adventurousCount << endl;
         fout << "Epic trips: " << epicCount << endl;
         fout << "Total trips: " << easyCount + activeCount + adventurousCount + epicCount << endl;
-        
-
-        
         fout.close();
 
 

@@ -18,5 +18,6 @@ double AskForMiles();
 bool AskForListServed();
 bool AskForMultipitch();
 void CountRating(int ratingValue, int& easyCount, int& activeCount, int& adventurousCount, int& epicCount, string tripType);
+string CheckForNoTrips(int size, string tripType);
 
 #endif

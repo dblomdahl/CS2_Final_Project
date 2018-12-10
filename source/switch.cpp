@@ -60,14 +60,6 @@ bool AskForMultipitch(){
     return switch_Multipitch;
 }
 
-// void CountRating(int ratingValue){
-//     switch(ratingValue){
-//         case 1: {easyCount++;}
-//         case 2: {activeCount++;}
-//         case 3: {adventurousCount++;}
-//         case 4: {epicCount};
-//     }
-
 void CountRating(int ratingValue, int& easyCount, int& activeCount, int& adventurousCount, int& epicCount, string tripType){
         
         if(ratingValue == 1){easyCount++;}
@@ -75,8 +67,20 @@ void CountRating(int ratingValue, int& easyCount, int& activeCount, int& adventu
         else if(ratingValue == 3){adventurousCount++;}
         else if(ratingValue == 4){epicCount++;}
         else { cout << "No " << tripType << " trips." << endl;}
-
 }
+
+// string CheckForNoTrips(int size, string tripType){
+//     string str;
+//     str.append("No ");
+//     str.append(tripType);
+//     str.append(" trips.");
+//     if(size < 1){
+//         return str;
+//     }
+//     else {
+//         return "There are trips";
+//     }
+// }
 
 
 
