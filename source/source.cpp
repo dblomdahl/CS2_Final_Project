@@ -9,7 +9,6 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <unistd.h>
 
 using namespace std;
 
@@ -80,54 +79,32 @@ int main(){
 
         for(int i = 0; i < hikeTrips.size(); i++){
             hikeTrips[i].CalculateRating();
-            switch(hikeTrips[i].GetRatingValue()){
-                case 1: {easyCount++;}
-                case 2: {activeCount++;}
-                case 3: {adventurousCount++;}
-                case 4: {epicCount++;}
-            }
+            CountRating(hikeTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "hiking");
         }
-        
-        
         for(int i = 0; i < backpackTrips.size(); i++){
             backpackTrips[i].CalculateRating();
-            switch(backpackTrips[i].GetRatingValue()){
-                case 1: {easyCount++;}
-                case 2: {activeCount++;}
-                case 3: {adventurousCount++;}
-                case 4: {epicCount++;}
-            }
+            CountRating(backpackTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "backpacking");
         }
         for(int i = 0; i < bikeTrips.size(); i++){
             bikeTrips[i].CalculateRating();
-            switch(backpackTrips[i].GetRatingValue()){
-                case 1: {easyCount++;}
-                case 2: {activeCount++;}
-                case 3: {adventurousCount++;}
-                case 4: {epicCount++;}
-            }
+            CountRating(backpackTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "biking");
         }
         for(int i = 0; i < climbTrips.size(); i++){
-            climbTrips[i].CalculateRating();
-            switch(climbTrips[i].GetRatingValue()){
-                case 1: {easyCount++;}
-                case 2: {activeCount++;}
-                case 3: {adventurousCount++;}
-                case 4: {epicCount++;}
-            }
+            bikeTrips[i].CalculateRating();
+            CountRating(backpackTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "climbing");
         }
 
         for(int i = 0; i < hikeTrips.size(); i++){
-            cout << "Hike Trip " << i+1 << ": " << hikeTrips[i].GetLocation() << ", " << hikeTrips[i].GetRatingString() << ", " << hikeTrips[i].GetRatingValue() << endl;  
+            cout << "Hike Trip " << i+1 << ": " << hikeTrips[i].GetLocation() << ", " << hikeTrips[i].GetRatingString() << endl;  
         }
         for(int i = 0; i < backpackTrips.size(); i++){
-            cout << "Backpack Trip " << i+1 << ": " << backpackTrips[i].GetLocation() << ", " << backpackTrips[i].GetRatingString() << ", " << backpackTrips[i].GetRatingValue() << endl;
+            cout << "Backpack Trip " << i+1 << ": " << backpackTrips[i].GetLocation() << ", " << backpackTrips[i].GetRatingString() << endl;
         }
         for(int i = 0; i < bikeTrips.size(); i++){
-            cout << "Bike Trip " << i+1 << ": " << bikeTrips[i].GetLocation() << ", " << bikeTrips[i].GetRatingString() << ", " << bikeTrips[i].GetRatingValue() << endl;
+            cout << "Bike Trip " << i+1 << ": " << bikeTrips[i].GetLocation() << ", " << bikeTrips[i].GetRatingString() << endl;
         }
         for(int i = 0; i < climbTrips.size(); i++){
-            cout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << ", " << climbTrips[i].GetRatingValue() << endl;
+            cout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << endl;
         }
 
 ofstream fout;
@@ -137,21 +114,23 @@ ofstream fout;
             return 0;
         }
          for(int i = 0; i < hikeTrips.size(); i++){
-            fout << "Hike Trip " << i+1 << ": " << hikeTrips[i].GetLocation() << ", " << hikeTrips[i].GetRatingString() << ", " << hikeTrips[i].GetRatingValue() << endl;  
+            fout << "Hike Trip " << i+1 << ": " << hikeTrips[i].GetLocation() << ", " << hikeTrips[i].GetRatingString() << endl;  
         }
         for(int i = 0; i < backpackTrips.size(); i++){
-            fout << "Backpack Trip " << i+1 << ": " << backpackTrips[i].GetLocation() << ", " << backpackTrips[i].GetRatingString() << ", " << backpackTrips[i].GetRatingValue() << endl;
+            fout << "Backpack Trip " << i+1 << ": " << backpackTrips[i].GetLocation() << ", " << backpackTrips[i].GetRatingString() << endl;
         }
         for(int i = 0; i < bikeTrips.size(); i++){
-            fout << "Bike Trip " << i+1 << ": " << bikeTrips[i].GetLocation() << ", " << bikeTrips[i].GetRatingString() << ", " << bikeTrips[i].GetRatingValue() << endl;
+            fout << "Bike Trip " << i+1 << ": " << bikeTrips[i].GetLocation() << ", " << bikeTrips[i].GetRatingString() << endl;
         }
         for(int i = 0; i < climbTrips.size(); i++){
-            fout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << ", " << climbTrips[i].GetRatingValue() << endl;
+            fout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << endl;
         }
-        fout << "easy trips: " << easyCount << endl;
-        fout << "active trips: " << activeCount << endl;
-        fout << "adventurous trips: " << adventurousCount << endl;
-        fout << "epic trips: " << epicCount << endl;
+        fout << endl;
+        fout << "Easy trips: " << easyCount << endl;
+        fout << "Active trips: " << activeCount << endl;
+        fout << "Adventurous trips: " << adventurousCount << endl;
+        fout << "Epic trips: " << epicCount << endl;
+        fout << "Total trips: " << easyCount + activeCount + adventurousCount + epicCount << endl;
         
 
         

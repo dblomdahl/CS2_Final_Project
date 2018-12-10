@@ -27,9 +27,11 @@ void BikeSwitch(){
 string AskForLocation(){
     string switch_Location;
     cout << "Where is the trip location?" << endl;
+    // getline(cin, switch_Location);
     cin >> switch_Location;
     return switch_Location;
 }
+
 int AskForDays(){
     int switch_Days;
     cout << "How many days is the trip?" << endl;
@@ -66,7 +68,15 @@ bool AskForMultipitch(){
 //         case 4: {epicCount};
 //     }
 
+void CountRating(int ratingValue, int& easyCount, int& activeCount, int& adventurousCount, int& epicCount, string tripType){
+        
+        if(ratingValue == 1){easyCount++;}
+        else if(ratingValue == 2){activeCount++;}
+        else if(ratingValue == 3){adventurousCount++;}
+        else if(ratingValue == 4){epicCount++;}
+        else { cout << "No " << tripType << " trips." << endl;}
 
+}
 
 
 

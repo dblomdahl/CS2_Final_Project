@@ -12,6 +12,7 @@
         "typeinfo": "cpp",
         "algorithm": "cpp",
         "ostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "istream": "cpp"
     }
 }

@@ -1,4 +1,9 @@
-easy trips: 0
-active trips: 0
-adventurous trips: 0
-epic trips: 0
+Hike Trip 1: w, Easy-Going
+Hike Trip 2: r, Easy-Going
+Hike Trip 3: v, Easy-Going
+
+Easy trips: 3
+Active trips: 0
+Adventurous trips: 0
+Epic trips: 0
+Total trips: 3
