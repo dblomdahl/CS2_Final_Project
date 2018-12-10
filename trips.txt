@@ -1,6 +1,9 @@
+Hike Trip 1: MtSpo, Easy-Going
+Hike Trip 2: EnchantmentsSansConcussion, Epic
+Backpack Trip 1: EnglePeakProSnowInSeptember, Active
 
-Easy trips: 0
-Active trips: 0
+Easy trips: 1
+Active trips: 1
 Adventurous trips: 0
-Epic trips: 0
-Total trips: 0
+Epic trips: 1
+Total trips: 3

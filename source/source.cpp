@@ -25,26 +25,23 @@ int main(){
         vector<BikingTrip> bikeTrips;
         vector<ClimbingTrip> climbTrips;
         vector<IceClimbingTrip> iceClimbTrips;
+        bool NoChosen = false;
 
         do{
-            cout << "Add a trip? y/n" << endl;
-            cin >> addTrip;
-            if(addTrip == 'n'){
-                break;
-            }
+            char addTrip;
             cout << "What kind of trip you would like to add?" << endl;
             cout << "1 Hiking Trip" << endl << "2 Backpacking Trip" << endl << "3 Biking Trip" << endl << "4 Climbing Trip" << endl << "5 Ice Climbing Trip" << endl;
-            
-            cin >> tripSwitch;
-            switch(tripSwitch){   
-            case 1: { cout << "Choice is hiking" << endl;
+            cout << "'n' if you have no more trips to add" << endl;
+            cin >> addTrip;
+            if (addTrip == '1'){ cout << "Choice is hiking" << endl;
                 double miles1;
                 miles1 = AskForMiles("hiking");
                 string location1;
                 location1 = AskForLocation("hiking");
                 hikeTrips.push_back( HikingTrip(location1, miles1));
-                break; } 
-            case 2: { cout << "Choice is backpacking" << endl; 
+                // break; 
+                } 
+            else if (addTrip == '2'){ cout << "Choice is backpacking" << endl; 
                 int days2;
                 days2 = AskForDays("backpacking");
                 double miles2;
@@ -52,8 +49,9 @@ int main(){
                 string location2;
                 location2 = AskForLocation("backpacking");
                 backpackTrips.push_back( BackpackingTrip(days2, location2, miles2));
-                break; } 
-            case 3: { cout << "Choice is biking" << endl;
+                // break; 
+                } 
+            else if (addTrip == '3'){ cout << "Choice is biking" << endl;
                 int days3;
                 days3 = AskForDays("biking");
                 bool liftserved3;
@@ -61,8 +59,9 @@ int main(){
                 string location3;
                 location3 = AskForLocation("biking");
                 bikeTrips.push_back( BikingTrip(days3, location3, liftserved3));
-                break; }
-            case 4: { cout << "Choice is climbing" << endl;
+                // break; 
+                }
+            else if (addTrip == '4'){ cout << "Choice is climbing" << endl;
                 int days4;
                 days4 = AskForDays("climbing");
                 bool multipitch4;
@@ -70,18 +69,23 @@ int main(){
                 string location4;
                 location4 = AskForLocation("climbing");
                 climbTrips.push_back( ClimbingTrip(days4, location4, multipitch4));
-                break; }
-            case 5: { cout << "Choice is ice climbing" << endl;
+                // break; 
+                }
+            else if (addTrip == '5'){ cout << "Choice is ice climbing" << endl;
                 int days5;
                 days5 = AskForDays("ice climbing");
                 string location5;
                 location5 = AskForLocation("ice climbing");
                 iceClimbTrips.push_back( IceClimbingTrip(days5, location5));
-                break; }
-            default: { cout << "Invalid. Choose Another Number"; 
-                break; } 
+                }
+            else if(addTrip == 'n'){
+                cout << "No more trips to add" << endl;
+                NoChosen = true;
             }
-        }while(1 < 2);
+            else{ cout << "Invalid. Choose Another Number"; 
+                } 
+        
+        }while(NoChosen == false);
 
         for(int i = 0; i < hikeTrips.size(); i++){
             hikeTrips[i].CalculateRating();
@@ -113,10 +117,8 @@ int main(){
             cout << "Climb Trip " << i+1 << ": " << climbTrips[i].GetLocation() << ", " << climbTrips[i].GetRatingString() << endl;
         }
 
-        cout << "Hiking trips size is " << hikeTrips.size() << endl;
-
 ofstream fout;
-        fout.open("trips.txt");
+        fout.open("trips.csv");
         if(fout.fail() ) {
             cout << "can't open file" << endl;
             return 0;
