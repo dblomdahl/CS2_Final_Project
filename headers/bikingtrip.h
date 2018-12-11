@@ -23,14 +23,16 @@ class BikingTrip : public Trip{
         _location = location;
         _liftserved = liftserved;
     }
-
-  
     int GetDays();
     string GetLocation();
     string GetRatingString();
     int GetRatingValue();
     void CalculateRating();
     void GetLiftServed();
+    friend ostream &operator<<( ostream &output, BikingTrip T ) { 
+        output << "Biking trip to " << T.GetLocation() << " is " << T.GetRatingString() << endl;
+         return output;
+    }
     
 };
 

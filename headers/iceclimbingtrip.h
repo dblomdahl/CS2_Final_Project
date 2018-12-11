@@ -23,6 +23,10 @@ class IceClimbingTrip : public Trip{
     void CalculateRating();
     int GetRatingValue();
     string GetRatingString();
+    friend ostream &operator<<( ostream &output, IceClimbingTrip T ) { 
+        output << "Ice Climbing trip to " << T.GetLocation() << " is " << T.GetRatingString() << endl;
+         return output;
+    }
 };
 
 #endif

@@ -11,7 +11,6 @@
 #include <string>
 #include <iostream>
 
-void BikeSwitch();
 string AskForLocation(string tripType);
 int AskForDays(string tripType);
 double AskForMiles(string tripType);

@@ -25,16 +25,11 @@ class Trip{
         _days = days;
         _location = location;
     }
-
-    // void SetDays();
-    // void SetLocation();
     int GetDays();
     string GetLocation();
     string GetRatingString();
     int GetRatingValue();
-    void CalculateRating();
-
-
+    void CalculateRating(); 
 };
 
 #endif

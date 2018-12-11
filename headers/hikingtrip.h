@@ -27,6 +27,13 @@ class HikingTrip : public Trip{
     string GetRatingString();
     int GetRatingValue();
 
+    friend ostream &operator<<( ostream &output, HikingTrip T){ 
+        output << "Hiking trip to " << T.GetLocation() << " is " << T.GetRatingString() << endl;
+        return output;
+    }
+
+    
+
 
 };
 

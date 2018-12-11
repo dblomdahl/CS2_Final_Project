@@ -32,6 +32,10 @@ class ClimbingTrip : public Trip{
     void GetMulitpitch();
     string GetRatingString();
     int GetRatingValue();
+    friend ostream &operator<<( ostream &output, ClimbingTrip T ) { 
+        output << "Climbing trip to " << T.GetLocation() << " is " << T.GetRatingString() << endl;
+         return output;
+    }
 };
 
 #endif

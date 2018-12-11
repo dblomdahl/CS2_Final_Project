@@ -9,21 +9,6 @@
 #include <iostream>
 using namespace std;
 
-void BikeSwitch(){
-    // string switch_Location;
-    // int switch_Days;
-    // bool switch_Liftserved;
-
-    // cout << "Where is the bike location?" << endl;
-    // cin >> switch_Location;
-    // cout << "How many days will you bike for?" << endl;
-    // cin >> switch_days;
-    // cout << "Enter 1 if the bike trip is lift-served, 0 if not. " << endl;
-    // cin >> switch_liftserved;
-    // bikeTrips.push_back( BikingTrip(switch_days, switch_Location, switch_liftserved));
-
-}
-
 string AskForLocation(string tripType){
     string switch_Location;
     cout << "Where is the " << tripType << " trip location?" << endl;
@@ -69,18 +54,6 @@ void CountRating(int ratingValue, int& easyCount, int& activeCount, int& adventu
         else { cout << "No " << tripType << " trips." << endl;}
 }
 
-// string CheckForNoTrips(int size, string tripType){
-//     string str;
-//     str.append("No ");
-//     str.append(tripType);
-//     str.append(" trips.");
-//     if(size < 1){
-//         return str;
-//     }
-//     else {
-//         return "There are trips";
-//     }
-// }
 
 
 

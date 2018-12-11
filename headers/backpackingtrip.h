@@ -23,15 +23,16 @@ class BackpackingTrip : public Trip{
         _location = location;
         _miles = miles;
     }
-
     int GetDays();
     string GetLocation();
     double GetMiles();
     void CalculateRating();
     string GetRatingString();
     int GetRatingValue();
-
-
+    friend ostream &operator<<( ostream &output, BackpackingTrip T ) { 
+        output << "Backpacking trip to " << T.GetLocation() << " is " << T.GetRatingString() << endl;
+         return output;
+    }
 };
 
 #endif

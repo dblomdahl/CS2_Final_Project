@@ -1,9 +1,11 @@
-Hike Trip 1: MtSpo, Easy-Going
-Hike Trip 2: EnchantmentsSansConcussion, Epic
-Backpack Trip 1: EnglePeakProSnowInSeptember, Active
+Hiking trip to sdfg is Epic
+Backpacking trip to fgh is Epic
+Biking trip to ghdfgh is Epic
+Climbing trip to bgfg is Epic
+Ice Climbing trip to sdfgf is Epic
 
-Easy trips: 1
-Active trips: 1
+Easy trips: 0
+Active trips: 0
 Adventurous trips: 0
-Epic trips: 1
-Total trips: 3
+Epic trips: 5
+Total trips: 5
