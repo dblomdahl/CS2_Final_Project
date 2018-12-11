@@ -32,8 +32,7 @@ class BikingTrip : public Trip{
     friend ostream &operator<<( ostream &output, BikingTrip T ) { 
         output << "Biking trip to " << T.GetLocation() << " is " << T.GetRatingString() << endl;
          return output;
-    }
-    
+    } 
 };
 
 #endif

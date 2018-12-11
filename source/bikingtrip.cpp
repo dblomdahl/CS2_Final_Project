@@ -4,19 +4,14 @@
 #include <string>
 using namespace std;
 
-
 int BikingTrip :: GetDays(){
-    return _days;
-}
+    return _days;}
 string BikingTrip :: GetLocation(){
-    return _location;
-}
+    return _location;}
 string BikingTrip :: GetRatingString(){
-    return _ratingString;
-}
+    return _ratingString;}
 int BikingTrip :: GetRatingValue(){
-    return _ratingValue;
-}
+    return _ratingValue;}
 void BikingTrip:: CalculateRating(){
     int count = 0;
     if(_days > 1){ count += 20;}

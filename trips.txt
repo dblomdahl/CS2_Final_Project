@@ -1,11 +1,11 @@
-Hiking trip to sdfg is Epic
-Backpacking trip to fgh is Epic
-Biking trip to ghdfgh is Epic
-Climbing trip to bgfg is Epic
-Ice Climbing trip to sdfgf is Epic
+Hiking trip to ASDF is Easy-Going
+Backpacking trip to ERT is Active
+Biking trip to gfh is Active
+Climbing trip to daf is Active
+Ice Climbing trip to ghj is Epic
 
-Easy trips: 0
-Active trips: 0
+Easy trips: 1
+Active trips: 3
 Adventurous trips: 0
-Epic trips: 5
+Epic trips: 1
 Total trips: 5

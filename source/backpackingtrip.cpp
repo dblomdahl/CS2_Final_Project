@@ -5,17 +5,13 @@
 using namespace std;
 
 int BackpackingTrip :: GetDays(){
-    return _days;
-}
+    return _days;}
 string BackpackingTrip :: GetLocation(){
-    return _location;
-}
+    return _location;}
 string BackpackingTrip :: GetRatingString(){
-    return _ratingString;
-}
+    return _ratingString;}
 int BackpackingTrip :: GetRatingValue(){
-    return _ratingValue;
-}
+    return _ratingValue;}
 void BackpackingTrip:: CalculateRating(){
     double count = 0;
     count += _miles * 3;

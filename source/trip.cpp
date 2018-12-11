@@ -5,17 +5,10 @@
 using namespace std;
 
 int Trip :: GetDays(){
-    return _days;
-}
-
+    return _days;}
 string Trip :: GetLocation(){
-    return _location;
-}
-
+    return _location;}
 string Trip :: GetRatingString(){
-    return _ratingString;
-}
-
+    return _ratingString;}
 int Trip :: GetRatingValue(){
-    return _ratingValue;
-}
+    return _ratingValue;}

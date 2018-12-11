@@ -6,14 +6,11 @@ using namespace std;
 
 
 string HikingTrip :: GetLocation(){
-    return _location;
-}
+    return _location;}
 string HikingTrip :: GetRatingString(){
-    return _ratingString;
-}
+    return _ratingString;}
 int HikingTrip :: GetRatingValue(){
-    return _ratingValue;
-}
+    return _ratingValue;}
 void HikingTrip:: CalculateRating(){
     double count = 0;
     count = _miles * 5;

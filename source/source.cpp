@@ -13,7 +13,6 @@
 using namespace std;
 
 int main(){
-
         char addTrip = 'y';
         int tripSwitch = 0;
         int easyCount = 0;
@@ -26,7 +25,7 @@ int main(){
         vector<ClimbingTrip> climbTrips;
         vector<IceClimbingTrip> iceClimbTrips;
         bool NoChosen = false;
-
+// DO-WHILE LOOP TO ADD TRIPS
         do{
             char addTrip;
             cout << "What kind of trip you would like to add?" << endl;
@@ -86,45 +85,35 @@ int main(){
                 } 
         
         }while(NoChosen == false);
-
+// CALCULATE RATING
         for(int i = 0; i < hikeTrips.size(); i++){
             hikeTrips[i].CalculateRating();
-            CountRating(hikeTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "hiking");
-        }
+            CountRating(hikeTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "hiking");}
         for(int i = 0; i < backpackTrips.size(); i++){
             backpackTrips[i].CalculateRating();
-            CountRating(backpackTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "backpacking");
-        }
+            CountRating(backpackTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "backpacking");}
         for(int i = 0; i < bikeTrips.size(); i++){
             bikeTrips[i].CalculateRating();
-            CountRating(bikeTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "biking");
-        }
+            CountRating(bikeTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "biking");}
         for(int i = 0; i < climbTrips.size(); i++){
             climbTrips[i].CalculateRating();
-            CountRating(climbTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "climbing");
-        }
+            CountRating(climbTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "climbing");}
          for(int i = 0; i < iceClimbTrips.size(); i++){
             iceClimbTrips[i].CalculateRating();
-            CountRating(iceClimbTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "ice climbing");
-        }
-
-
+            CountRating(iceClimbTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "ice climbing");}
+// OUTPUT TO TERMINAL
         for(int i = 0; i < hikeTrips.size(); i++){
-            cout << hikeTrips[i];
-        }
+            cout << hikeTrips[i];}
         for(int i = 0; i < backpackTrips.size(); i++){
-            cout << backpackTrips[i];
-        }
+            cout << backpackTrips[i];}
         for(int i = 0; i < bikeTrips.size(); i++){
-            cout << bikeTrips[i];
-        }
+            cout << bikeTrips[i];}
         for(int i = 0; i < climbTrips.size(); i++){
-            cout << climbTrips[i];
-        }
+            cout << climbTrips[i];}
         for(int i = 0; i < iceClimbTrips.size(); i++){
             cout << iceClimbTrips[i];        }
-
-ofstream fout;
+//  OUTPUT TO TXT FILE
+        ofstream fout;
         fout.open("trips.txt");
         if(fout.fail() ) {
             cout << "can't open file" << endl;
@@ -140,7 +129,6 @@ ofstream fout;
             fout << climbTrips[i];      }
         for(int i = 0; i < iceClimbTrips.size(); i++){
             fout << iceClimbTrips[i];   }
-
         fout << endl;
         fout << "Easy trips: " << easyCount << endl;
         fout << "Active trips: " << activeCount << endl;
@@ -148,7 +136,5 @@ ofstream fout;
         fout << "Epic trips: " << epicCount << endl;
         fout << "Total trips: " << easyCount + activeCount + adventurousCount + epicCount << endl;
         fout.close();
-
-
-return 0;
+    return 0;
 }
