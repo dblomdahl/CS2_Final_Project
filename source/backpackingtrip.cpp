@@ -12,11 +12,10 @@ string BackpackingTrip :: GetRatingString(){
     return _ratingString;}
 int BackpackingTrip :: GetRatingValue(){
     return _ratingValue;}
-void BackpackingTrip:: CalculateRating(){
+void BackpackingTrip:: CalculateRating(){ // Trip Rating is based on how many points the trip scores (depending on days and miles)
     double count = 0;
     count += _miles * 3;
     count += _days * 10;
-
     if(count >= 90){
        _ratingString = "Epic";
        _ratingValue = 4;

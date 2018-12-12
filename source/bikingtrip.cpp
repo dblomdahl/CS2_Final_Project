@@ -12,7 +12,7 @@ string BikingTrip :: GetRatingString(){
     return _ratingString;}
 int BikingTrip :: GetRatingValue(){
     return _ratingValue;}
-void BikingTrip:: CalculateRating(){
+void BikingTrip:: CalculateRating(){  // Trip Rating is based on how many points the trip scores (depending on days, miles and liftserved)
     int count = 0;
     if(_days > 1){ count += 20;}
     if(_days > 2){ count += 40;}

@@ -4,14 +4,13 @@
 #include <string>
 using namespace std;
 
-
 string HikingTrip :: GetLocation(){
     return _location;}
 string HikingTrip :: GetRatingString(){
     return _ratingString;}
 int HikingTrip :: GetRatingValue(){
     return _ratingValue;}
-void HikingTrip:: CalculateRating(){
+void HikingTrip:: CalculateRating(){ // Trip Rating is based on how many points the trip scores (depending on miles)
     double count = 0;
     count = _miles * 5;
 

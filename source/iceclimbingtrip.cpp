@@ -12,6 +12,6 @@ string IceClimbingTrip :: GetRatingString(){
     return _ratingString;}
 int IceClimbingTrip :: GetRatingValue(){
     return _ratingValue;}
-void IceClimbingTrip:: CalculateRating(){
+void IceClimbingTrip:: CalculateRating(){  //Ice climbing trips are always epic
     _ratingString = "Epic";
     _ratingValue = 4;}

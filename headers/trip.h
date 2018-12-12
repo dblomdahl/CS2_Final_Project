@@ -9,7 +9,7 @@ using namespace std;
 class Trip{
     
     private: 
-    int _days;
+    int _days;                  // all kinds of trips have these 4 variables
     string _location;
     string _ratingString;
     int _ratingValue;

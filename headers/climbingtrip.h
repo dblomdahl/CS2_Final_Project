@@ -23,7 +23,6 @@ class ClimbingTrip : public Trip{
         _location = location;
         _multipitch = multipitch;
     }
-
     void SetDays();
     void SetLocation();
     int GetDays();

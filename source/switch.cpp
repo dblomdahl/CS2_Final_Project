@@ -12,7 +12,8 @@ using namespace std;
 string AskForLocation(string tripType){
     string switch_Location;
     cout << "Where is the " << tripType << " trip location?" << endl;
-    // getline(cin, switch_Location);
+    // getline(cin, switch_Location);       // I tried to include this line so you could enter in location with spaces but
+                                            // it never helped at all eg) "Smith Rock" instead of "SmithRock"
     cin >> switch_Location;
     return switch_Location;
 }

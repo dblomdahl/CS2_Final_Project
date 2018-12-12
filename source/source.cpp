@@ -31,14 +31,13 @@ int main(){
             cout << "What kind of trip you would like to add?" << endl;
             cout << "1 Hiking Trip" << endl << "2 Backpacking Trip" << endl << "3 Biking Trip" << endl << "4 Climbing Trip" << endl << "5 Ice Climbing Trip" << endl;
             cout << "'n' if you have no more trips to add" << endl;
-            cin >> addTrip;
+            cin >> addTrip;         // User inputs a character of 1, 2, 3, 4, 5, or 'n'
             if (addTrip == '1'){ cout << "Choice is hiking" << endl;
                 double miles1;
                 miles1 = AskForMiles("hiking");
                 string location1;
                 location1 = AskForLocation("hiking");
                 hikeTrips.push_back( HikingTrip(location1, miles1));
-                // break; 
                 } 
             else if (addTrip == '2'){ cout << "Choice is backpacking" << endl; 
                 int days2;
@@ -48,7 +47,6 @@ int main(){
                 string location2;
                 location2 = AskForLocation("backpacking");
                 backpackTrips.push_back( BackpackingTrip(days2, location2, miles2));
-                // break; 
                 } 
             else if (addTrip == '3'){ cout << "Choice is biking" << endl;
                 int days3;
@@ -58,7 +56,6 @@ int main(){
                 string location3;
                 location3 = AskForLocation("biking");
                 bikeTrips.push_back( BikingTrip(days3, location3, liftserved3));
-                // break; 
                 }
             else if (addTrip == '4'){ cout << "Choice is climbing" << endl;
                 int days4;
@@ -67,8 +64,7 @@ int main(){
                 multipitch4 = AskForMultipitch();
                 string location4;
                 location4 = AskForLocation("climbing");
-                climbTrips.push_back( ClimbingTrip(days4, location4, multipitch4));
-                // break; 
+                climbTrips.push_back( ClimbingTrip(days4, location4, multipitch4)); 
                 }
             else if (addTrip == '5'){ cout << "Choice is ice climbing" << endl;
                 int days5;
@@ -77,7 +73,7 @@ int main(){
                 location5 = AskForLocation("ice climbing");
                 iceClimbTrips.push_back( IceClimbingTrip(days5, location5));
                 }
-            else if(addTrip == 'n'){
+            else if(addTrip == 'n'){        // ends the do-while loop is 'n' is inputted
                 cout << "No more trips to add" << endl;
                 NoChosen = true;
             }
@@ -87,8 +83,8 @@ int main(){
         }while(NoChosen == false);
 // CALCULATE RATING
         for(int i = 0; i < hikeTrips.size(); i++){
-            hikeTrips[i].CalculateRating();
-            CountRating(hikeTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "hiking");}
+            hikeTrips[i].CalculateRating();     //Calculates the rating using the unique HikingTrip CalculateRating function
+            CountRating(hikeTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "hiking");} //Adds 1 to the intensityCount variable so we know how many of each intensity there are
         for(int i = 0; i < backpackTrips.size(); i++){
             backpackTrips[i].CalculateRating();
             CountRating(backpackTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "backpacking");}
@@ -103,15 +99,15 @@ int main(){
             CountRating(iceClimbTrips[i].GetRatingValue(), easyCount, activeCount, adventurousCount, epicCount, "ice climbing");}
 // OUTPUT TO TERMINAL
         for(int i = 0; i < hikeTrips.size(); i++){
-            cout << hikeTrips[i];}
+            cout << hikeTrips[i];}                      //using overloaded operator <<
         for(int i = 0; i < backpackTrips.size(); i++){
-            cout << backpackTrips[i];}
+            cout << backpackTrips[i];}                  //using overloaded operator <<
         for(int i = 0; i < bikeTrips.size(); i++){
-            cout << bikeTrips[i];}
+            cout << bikeTrips[i];}                      //using overloaded operator <<
         for(int i = 0; i < climbTrips.size(); i++){
-            cout << climbTrips[i];}
+            cout << climbTrips[i];}                     //using overloaded operator <<
         for(int i = 0; i < iceClimbTrips.size(); i++){
-            cout << iceClimbTrips[i];        }
+            cout << iceClimbTrips[i];        }          //using overloaded operator <<
 //  OUTPUT TO TXT FILE
         ofstream fout;
         fout.open("trips.txt");
@@ -120,21 +116,21 @@ int main(){
             return 0;
         }
         for(int i = 0; i < hikeTrips.size(); i++){
-            fout << hikeTrips[i];       }
+            fout << hikeTrips[i];       }          //using overloaded operator <<
         for(int i = 0; i < backpackTrips.size(); i++){
-            fout << backpackTrips[i];   }
+            fout << backpackTrips[i];   }          //using overloaded operator <<
         for(int i = 0; i < bikeTrips.size(); i++){
-            fout << bikeTrips[i];       }
+            fout << bikeTrips[i];       }          //using overloaded operator <<
         for(int i = 0; i < climbTrips.size(); i++){
-            fout << climbTrips[i];      }
+            fout << climbTrips[i];      }          //using overloaded operator <<
         for(int i = 0; i < iceClimbTrips.size(); i++){
-            fout << iceClimbTrips[i];   }
+            fout << iceClimbTrips[i];   }          //using overloaded operator <<
         fout << endl;
-        fout << "Easy trips: " << easyCount << endl;
-        fout << "Active trips: " << activeCount << endl;
-        fout << "Adventurous trips: " << adventurousCount << endl;
-        fout << "Epic trips: " << epicCount << endl;
-        fout << "Total trips: " << easyCount + activeCount + adventurousCount + epicCount << endl;
+        fout << "Easy trips: " << easyCount << endl; //prints amount of Easy-level trips
+        fout << "Active trips: " << activeCount << endl; //prints amount of Active-level trips
+        fout << "Adventurous trips: " << adventurousCount << endl; //prints amount of Adventurous-level trips
+        fout << "Epic trips: " << epicCount << endl;  //prints amount of Epic-level trips
+        fout << "Total trips: " << easyCount + activeCount + adventurousCount + epicCount << endl; //prints total amount of trips
         fout.close();
     return 0;
 }
